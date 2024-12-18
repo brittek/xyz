@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>James L. Britton | Brittek™ Digital - Independent Creative Director & Developer</title>
+	<meta name="description" content="James L. Britton, founder of Brittek™ Digital in Sydney, Australia, specializes in premium digital assets, web development, and AI-driven solutions. Connect with our creative director to explore modern web technologies and elevate your brand.">
+
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="James L. Britton | Brittek™ Digital - Independent Creative Director & Developer">
+	<meta property="og:description" content="Discover premium digital assets, web development, and AI solutions with Brittek™ Digital. Connect with James L. Britton for innovative design, branding, and cutting-edge web experiences.">
+	<meta property="og:image" content="https://brittek.digital/images/og-image.jpg">
+	<meta property="og:url" content="https://brittek.digital">
+	<meta property="og:type" content="website">
+
+	<!-- Twitter Card Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="James L. Britton | Brittek™ Digital - Independent Creative Director & Developer">
+	<meta name="twitter:description" content="Premium digital solutions, cutting-edge web development, AI-driven strategies, and world-class branding assets. Connect with James L. Britton and Brittek™ Digital.">
+	<meta name="twitter:image" content="https://brittek.digital/images/og-image.jpg">
+
+	<link rel="canonical" href="https://brittek.digital">
+
+	<!-- Preload Critical Fonts -->
+	<link rel="preload" href="https://assets.codepen.io/9806267/TestS%C3%B6hneBreit-Buch.otf" as="font" type="font/otf" crossorigin="anonymous">
+	<link rel="preload" href="https://assets.codepen.io/9806267/BlackMambaTrial-Venom.otf" as="font" type="font/otf" crossorigin="anonymous">
+
+	<!-- Favicon and Touch Icons -->
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+	<style>
+		/* Root Variables */
+		:root {
+			--background-color: #101010;
+			--text-color: #dbdbdb;
+			--highlight-color: #9eff00;
+			--icon-hover-shadow: rgba(158, 255, 0, 0.4);
+			--font-primary: 'TestSöhneBreit', sans-serif;
+			--font-secondary: 'BlackMamba', sans-serif;
+			--transition-duration: 0.3s;
+			--accent-color: #9eff00;
+		}
+
+		/* Font Faces */
+		@font-face {
+			font-family: 'TestSöhneBreit';
+			src: url('https://assets.codepen.io/9806267/TestS%C3%B6hneBreit-Buch.otf') format('opentype');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'BlackMamba';
+			src: url('https://assets.codepen.io/9806267/BlackMambaTrial-Venom.otf') format('opentype');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		/* Global Styles */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: var(--background-color);
+			color: var(--text-color);
+			font-family: var(--font-primary);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			padding: 20px;
+			overflow-x: hidden;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			max-width: 1200px;
+			width: 100%;
+		}
+
+		/* Heading Styles */
+		h1 {
+			font-family: var(--font-primary);
+			font-size: 6vmin;
+			line-height: 1.1;
+			text-transform: uppercase;
+			max-width: 30ch;
+			margin-bottom: 1.5rem;
+			animation: fadeInDown 1s ease-out forwards;
+		}
+
+		.font-bold {
+			font-weight: 700;
+		}
+
+		.brand-green {
+			color: var(--highlight-color);
+			transition: color var(--transition-duration) ease;
+		}
+
+		.brand-green:hover {
+			color: var(--accent-color);
+		}
+
+		/* Email Link Styles */
+		.email-link {
+			font-family: var(--font-primary);
+			font-size: 4vmin;
+			margin: 0.75rem 0;
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: var(--text-color);
+			text-decoration: none;
+			transition: color var(--transition-duration) ease, transform var(--transition-duration) ease;
+		}
+
+		.email-link:hover,
+		.email-link:focus {
+			color: var(--highlight-color);
+			transform: scale(1.05);
+			outline: none;
+		}
+
+		/* Location Styles */
+		.location {
+			font-size: 3vmin;
+			margin-top: 1rem;
+			animation: fadeInUp 1s ease-out forwards;
+		}
+
+		/* Social Icons Styles */
+		.social-icons {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			margin-top: 1.5rem;
+			justify-content: center;
+			animation: fadeIn 1s ease-out forwards;
+		}
+
+		.social-icon {
+			color: var(--text-color);
+			transition: color var(--transition-duration) ease, transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease, background-color var(--transition-duration) ease;
+			font-size: 1.5rem;
+			width: 48px;
+			height: 48px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background-color: rgba(255, 255, 255, 0.05);
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		.social-icon:hover {
+			color: var(--highlight-color);
+			transform: scale(1.2);
+			box-shadow: 0 4px 15px var(--icon-hover-shadow);
+			background-color: rgba(158, 255, 0, 0.1);
+		}
+
+		.icon {
+			width: 24px;
+			height: 24px;
+			fill: currentColor;
+			transition: all var(--transition-duration) ease;
+		}
+
+		/* Special Text Styles */
+		.special-text-director {
+			font-family: var(--font-secondary);
+		}
+
+		/* Animations */
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		@keyframes fadeInDown {
+			from {
+				opacity: 0;
+				transform: translateY(-20px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		/* Responsive Styles */
+		@media (max-width: 768px) {
+			h1 {
+				font-size: 8vmin;
+			}
+
+			.email-link {
+				font-size: 5vmin;
+			}
+
+			.location {
+				font-size: 4vmin;
+			}
+
+			.social-icon {
+				width: 40px;
+				height: 40px;
+				font-size: 1.25rem;
+			}
+
+			.icon {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			h1 {
+				font-size: 10vmin;
+			}
+
+			.email-link {
+				font-size: 6vmin;
+			}
+
+			.location {
+				font-size: 5vmin;
+			}
+
+			.social-icon {
+				width: 36px;
+				height: 36px;
+				font-size: 1.1rem;
+			}
+
+			.icon {
+				width: 18px;
+				height: 18px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>
+			<span class="font-bold">INDEPENDENT</span> <br>
+			CREATIVE <span class="brand-green special-text-director">DIRECTOR</span> <br>
+			AND <span class="brand-green">DEVELOPER</span> WORKING WITH AGENCIES
+			AND BRANDS
+		</h1>
+		<a href="mailto:info@brittek.digital" class="email-link" aria-label="Send Email to info@brittek.digital">
+			INFO@BRITTEK.DIGITAL
+		</a>
+		<p class="location">
+			<span class="brand-green">SYDNEY</span>, WORLD. <br> ©2024
+		</p>
+		<div class="social-icons">
+
+			<!-- Website (Brittek) -->
+			<a href="https://brittek.digital" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit Brittek™ Digital Website">
+				<img src="https://assets.codepen.io/9806267/brittek_1.svg" alt="Brittek™ Digital Website" class="icon" loading="lazy">
+			</a>
+
+			<!-- Instagram -->
+			<a href="https://instagram.com/brittekdgtl" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit Instagram Profile">
+				<img src="https://assets.codepen.io/9806267/instagram.svg" alt="Instagram" class="icon" loading="lazy">
+			</a>
+
+			<!-- Twitter (X) -->
+			<a href="https://twitter.com/brittekdigital" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit Twitter Profile">
+				<img src="https://assets.codepen.io/9806267/x.svg" alt="Twitter" class="icon" loading="lazy">
+			</a>
+
+			<!-- Facebook -->
+			<a href="https://facebook.com/brittekdigital" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit Facebook Page">
+				<img src="https://assets.codepen.io/9806267/facebook.svg" alt="Facebook" class="icon" loading="lazy">
+			</a>
+
+			<!-- LinkedIn -->
+			<a href="https://linkedin.com/company/brittekdigital" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit LinkedIn Page">
+				<img src="https://assets.codepen.io/9806267/linkedin.svg" alt="LinkedIn" class="icon" loading="lazy">
+			</a>
+
+			<!-- Pinterest -->
+			<a href="https://pinterest.com/brittekdigital" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit Pinterest Profile">
+				<img src="https://assets.codepen.io/9806267/pinterest.svg" alt="Pinterest" class="icon" loading="lazy">
+			</a>
+
+			<!-- GitHub -->
+			<a href="https://github.com/brittek" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit GitHub Profile">
+				<img src="https://assets.codepen.io/9806267/github.svg" alt="GitHub" class="icon" loading="lazy">
+			</a>
+
+			<!-- CodePen -->
+			<a href="https://codepen.io/brittek" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit CodePen Profile">
+				<img src="https://assets.codepen.io/9806267/codepen.svg" alt="CodePen" class="icon" loading="lazy">
+			</a>
+
+			<!-- Gumroad -->
+			<a href="https://brittek.gumroad.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit Gumroad Store">
+				<img src="https://assets.codepen.io/9806267/gumroad.svg" alt="Gumroad" class="icon" loading="lazy">
+			</a>
+		</div>
+	</div>
+
+	<!-- Structured Data for SEO -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "James L. Britton",
+			"alternateName": "Brittek™ Digital",
+			"jobTitle": "Independent Creative Director and Developer",
+			"email": "mailto:info@brittek.digital",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Sydney",
+				"addressCountry": "Australia"
+			},
+			"url": "https://brittek.digital",
+			"sameAs": [
+				"https://instagram.com/brittekdgtl",
+				"https://twitter.com/brittekdigital",
+				"https://facebook.com/brittekdigital",
+				"https://linkedin.com/company/brittekdigital",
+				"https://pinterest.com/brittekdigital",
+				"https://codepen.io/brittek",
+				"https://github.com/brittek",
+				"https://brittek.gumroad.com"
+			]
+		}
+	</script>
+</body>
+
+</html>
